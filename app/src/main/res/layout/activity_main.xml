@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/imageButtonSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@android:color/white"
+        android:onClick="buttonSettingClick"
+        android:src="@drawable/setting"
+        android:contentDescription="@string/setting"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_below="@+id/textViewNoiseCount"
+        android:layout_marginTop="20dp">
+        <Button
+        android:id="@+id/buttonStop"
+        app:cornerRadius="10dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="116dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:onClick="buttonStopClick"
+        android:text="@string/stop" />
+        <Button
+            android:id="@+id/buttonStart"
+            app:cornerRadius="10dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="116dp"
+            android:layout_height="wrap_content"
+            android:onClick="buttonStartClick"
+            android:text="@string/start" />
+        <Button
+            android:id="@+id/buttonReset"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="116dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:onClick="buttonResetClick"
+            android:text="@string/reset"
+            app:cornerRadius="10dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewInfo"
+        style="@style/TextAppearance.Compat.Notification.Info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/norm"
+        android:textColor="@color/purple_500"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textViewNoiseLevel"
+        style="@style/TextAppearance.Compat.Notification.Info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/textViewInfo"
+        android:layout_marginTop="15dp"
+        android:text="@string/noiseLevel"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/textViewMaxNoise"
+        style="@style/TextAppearance.Compat.Notification.Info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewNoiseCount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="@string/max_val"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/textViewNoiseCount"
+        style="@style/TextAppearance.Compat.Notification.Info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/count"
+        android:textSize="20sp"
+        tools:ignore="RelativeOverlap"/>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/textViewNoiseLevel"
+        android:layout_marginTop="15dp"
+        android:layout_above="@id/textViewMaxNoise"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="30dp"/>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="10dp">
+        <TableRow
+            android:background="@color/purple_500">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/table_time"
+                android:textColor="@android:color/white"
+                android:padding="5sp"
+                android:textSize="14sp"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/table_level"
+                android:textColor="@android:color/white"
+                android:padding="5sp"
+                android:textSize="14sp"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/table_norm"
+                android:textColor="@android:color/white"
+                android:padding="5sp"
+                android:textSize="14sp"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"/>
+        </TableRow>
+    </TableLayout>
+
+    <ListView
+        android:id="@+id/tableInvoices"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tableLayout"
+        tools:listitem="@layout/cell"
+        android:padding="0dp"
+        android:transcriptMode="alwaysScroll"
+        android:stretchColumns="*">
+    </ListView>
+
+</RelativeLayout>

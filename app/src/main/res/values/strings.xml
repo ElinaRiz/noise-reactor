@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">NoiseReactor</string>
+    <string name="norm">Норматив: СН 2.2.4/2.1.8.562–96</string>
+    <string name="start">Старт</string>
+    <string name="stop">Стоп</string>
+    <string name="reset">Сбросить</string>
+    <string name="noiseLevel">Уровень шума: 0 db</string>
+    <string name="max_val">Макс. значение: 0 db</string>
+    <string name="count">Превышения 60 db: 0 c</string>
+    <string name="table_time">Время</string>
+    <string name="table_level">Уровень звука, db</string>
+    <string name="table_norm">Зн. норматива, db</string>
+    <string name="setting">Setting</string>
+</resources>

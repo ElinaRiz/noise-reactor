@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/cell_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Data"
+        android:paddingStart="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/cell_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Value"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cell_data"
+        app:layout_constraintEnd_toStartOf="@id/cell_norm"/>
+
+    <TextView
+        android:id="@+id/cell_norm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Norm"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cell_value"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
