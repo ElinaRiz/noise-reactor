@@ -31,8 +31,8 @@ NoiseReactor — Android-приложение, предназначенное д
 
 ## Скриншоты
 
-![Интерфейс приложения](screenshots/before_work.jpg)
-
-![Результаты работы](screenshots/after_work.jpg)
-
-![Задание допустимого уровня шума](screenshots/setting.jpg)
+<p align="center">
+  <img src="screenshots/before_work.jpg" width="250">
+  <img src="screenshots/after_work.jpg" width="250">
+  <img src="screenshots/setting.jpg" width="250">
+</p>
